@@ -1,148 +1,639 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
     scroll-behavior: smooth;
 }
-a{
-    text-decoration: none;
+body{
+    background-color: rgba(6, 6, 6, 0.945);
     color: white;
 }
-#navbar{
-    position: sticky;
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 988;
     top: 0;
-    left: 0;
-    z-index: 100;
-    padding: .5rem .5rem;
-    box-shadow: 5px 5px 20px rgb(26, 25, 25) ;
-    background-color: black;
-    color: white;
-}
-#navbarSupportedContent{
-    color: white;
 }
 
-#navbarSupportedContent a:hover{
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 5px;
-}
-#home{
-    margin-top: 50px;
+.nav-bd{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 80px;
+    padding: 10px;
+    background-color: white;
 }
-#home img{
-    height: 300px;
-    max-width: 300px;
+.nav_logo{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: larger;
+    font-weight: 600;
+}
+.navlist{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+.navlist li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+.navlist li a:hover{
+    border-bottom: 1px solid blue;
+    
+}
+/* home */
+#home{
+    justify-content: center;
+    display: flex;
+    margin-top: 200px;
+    align-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+#home div img{
+    width: 350px;
+    height: 350px;
+    background: rgba(255, 255, 255, 0.93);
+    /* background-image: linear-gradient(to right, #E5BDF6 , #D8DEDE); */
+    padding: 0;
     border-radius: 50%;
-
+    align-content: center;
 }
 .hometext{
-    font-size: 20px;
-    margin-top: 25px;   
+    align-content: center;
+    font-size: 30px;
 }
-.hometext p{
+.hometext p span{
+    color: blue;
+}
+
+
+/* about */
+#about{
+    justify-content: center;
+    margin-top: 200px;
+    margin: 50px;
+}
+#about div h3{
+    text-align: center;
     font-size: 40px;
 }
-#about{
-    margin: 80px;
+#about div p{
+    font-size: large;
+    margin-top: 40px;
 }
-#about h3{
-    text-align: center;
-}
-/* skill */
 
+/* skills */
 #skills{
     text-align: center;
-    height: 20%;
-    background-color: rgb(232, 231, 230);
+    margin-top: 200px;
+
 }
-.skillh2{
-    padding-top: 20px;
+#skills h2{
+    font-size: 40px;
+
 }
-#skillimg{
-    margin: 80px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-#skillimg img{
+.skillsdiv div img{
+    width: 100px;
     height: 100px;
-    width: 80px;
+    background-color: transparent;
 }
-#skills button{
-    margin-top: 30px;
+.skillsdiv{
+    margin-top: 40px;
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+    line-height: normal;
+    flex-wrap: wrap;
     margin-bottom: 20px;
 }
-#skills button a{
-    text-decoration: none;
-}
-/* project */
-.projecthead{
-    padding-top: 20px;
+.skillsdiv div{
     text-align: center;
+    padding: 10px;
 }
-.card img{
-    width: 18rem;
+.skillsdiv div h4{
+    margin-top: 5px;
+    
 }
-.card{
-    margin: 20px;
+.resume{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin-top: 50px;
+    border-radius: 20px;
+    color: black;
 }
-.projectflex{
-    padding: 20px;
+
+/* projects */
+.projects{
     display: flex;
     flex-wrap: wrap;
-    margin: 80px;
-    justify-content: space-between;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+    background-color: #eeee;
+    /* border-radius: 10px; */
+    /* margin: 30px; */
+    padding-top: 20px;
+}
+.projects div{
+    position: relative;
+    line-height: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+#projects h2{
+    text-align: center;
+    margin-top: 200px;
+    font-size: 40px;
+    justify-content: center;
+}
+/*  link1*/
+.link1:hover .link{
+    display: flex;
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    left: 25%;
+    gap: 10px;
+}
+.link1 img:hover{
+    opacity: 0.5;
+}
+.link1{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.link{
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    bottom: 40%;
+    display: none;
+}
+.link :nth-child(1){
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.link :nth-child(2){
+    background-color: rgb(21, 47, 241);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.projects div img{
+    max-width: 400px;
+    height: 250px;
+}
+
+/* link2 */
+.links1:hover .link2{
+    display: flex;
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    left: 25%;
+    gap: 10px;
+}
+.link2{
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    bottom: 40%;
+    display: none;
+}
+.link2 :nth-child(1){
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.link2 :nth-child(2){
+    background-color: rgb(21, 47, 241);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.links1 img:hover{
+    opacity: 0.5;
+}
+.links1{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+/* link3 */
+.links2:hover .link3{
+    display: flex;
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    left: 25%;
+    gap: 10px;
+}
+.link3{
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    bottom: 40%;
+    display: none;
+}
+.link3 :nth-child(1){
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.link3 :nth-child(2){
+    background-color: rgb(21, 47, 241);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.links2 img:hover{
+    opacity: 0.5;
+}
+.links2{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+/* link4 */
+.links3:hover .link4{
+    display: flex;
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    left: 25%;
+    gap: 10px;
+}
+.link4{
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    bottom: 40%;
+    display: none;
+}
+.link4 :nth-child(1){
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.link4 :nth-child(2){
+    background-color: rgb(21, 47, 241);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.links3 img:hover{
+    opacity: 0.5;
+}
+.links3{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+/* link5 */
+.links4:hover .link5{
+    display: flex;
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    left: 25%;
+    gap: 10px;
+}
+.link5{
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    bottom: 40%;
+    display: none;
+}
+.link5 :nth-child(1){
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.link5 :nth-child(2){
+    background-color: rgb(21, 47, 241);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.links4 img:hover{
+    opacity: 0.5;
+}
+.links4{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+/* link6 */
+.links5:hover .link6{
+    display: flex;
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    left: 25%;
+    gap: 10px;
+}
+.link6{
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    bottom: 40%;
+    display: none;
+}
+.link6 :nth-child(1){
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.link6 :nth-child(2){
+    background-color: rgb(21, 47, 241);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.links5 img:hover{
+    opacity: 0.5;
+}
+.links5{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+/* link6 */
+.links6:hover .link7{
+    display: flex;
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    left: 25%;
+    gap: 10px;
+}
+.link7{
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    bottom: 40%;
+    display: none;
+}
+.link7 :nth-child(1){
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.link7 :nth-child(2){
+    background-color: rgb(21, 47, 241);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.links6 img:hover{
+    opacity: 0.5;
+}
+.links6{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+/* link7 */
+.links7:hover .link8{
+    display: flex;
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    left: 25%;
+    gap: 10px;
+}
+.link8{
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    bottom: 40%;
+    display: none;
+}
+.link8 :nth-child(1){
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.link8 :nth-child(2){
+    background-color: rgb(21, 47, 241);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.links7 img:hover{
+    opacity: 0.5;
+}
+.links7{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+/* link8 */
+.links8:hover .link9{
+    display: flex;
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    left: 25%;
+    gap: 10px;
+}
+.link9{
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    bottom: 40%;
+    display: none;
+}
+.link9 :nth-child(1){
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.link9 :nth-child(2){
+    background-color: rgb(21, 47, 241);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.links8 img:hover{
+    opacity: 0.5;
+}
+.links8{
+    background-color: black;
+    color: white;
     text-align: center;
 }
 
 /* contact */
 
 #contact{
+    margin-top: 40px;
+    justify-content: center;
     text-align: center;
-    background-color: black;
-    color: white;
-    padding: 40px;
+    height: 200px;
+    align-content: center;
+    line-height: 50px;
 }
-.social{
-    word-spacing: 10px;
-    margin-top: 20px;
-    font-size: 24px;
+.soc{ 
+    gap: 15px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
 }
-.social a{
+.soc a{
     text-decoration: none;
     color: white;
 }
-#contact h3{
-    margin-top: 20px;
-    font-size: 15px;
+
+
+/* left */
+.left{
+    position: absolute;
+    bottom: 50%;
 }
+.left div{
+    display: flex;
+    flex-direction: column;
+    line-height: 50px;
+    position: fixed;
+    z-index: 99;
+    padding: 10px;
+    font-size: 30px;
+    border-right: 50px;
+    background-color: rgb(255, 255, 255);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.left div{
+    color: black;
+}
+
+
+ /* ham-menu */
+ .ham-menu{
+    position: relative;
+    margin-left: auto;
+    height: 50px;
+    z-index: 999;
+    width: 50px;
+ }
+ .ham-menu span{
+    background-color: black;
+    border-radius: 25px;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    top:50% ;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    transition: .3s ease;
+ }
+ .ham-menu span:nth-child(1){
+    top: 25%;
+ }
+ .ham-menu span:nth-child(3){
+    top: 75%;
+ }
+
+ /* x ham */
+
+ .ham-menu.active span:nth-child(1){
+    top: 50%;
+    transform: translate(-50% , -50%) rotate(45deg);
+ }
+ .ham-menu.active span:nth-child(2){
+    opacity: 0;
+ }
+ .ham-menu.active span:nth-child(3){
+    top: 50%;
+    transform: translate(-50% , -50%) rotate(-45deg);
+ }
+ .ham-menu{
+    display: none;
+ }
+
+ /* navright */
+
+.navright{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 10px;
+    top: 10%;
+    z-index: 999;
+    transition: .3s ease;
+    line-height: 30px;
+    width: 100%;
+    max-width: 220px;
+    background-color: white;
+    color: black;
+    position: fixed;
+    right: -450px;
+    height: 100vh;
+}
+.navright ul button{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: green;
+}
+.navright{
+    display: none;
+ }
+.navright ul li{
+    list-style: none;
+}
+.navright.active{
+    right: 0;
+}
+.navrightul li a{
+    color: black;
+    text-decoration: none;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.navrightul li a:hover{
+    color: blue;
+}
+
 @media (max-width:1000px) {
-    #home{
-        
-        display: block;
-        height: fit-content;
-        width: auto;
-    }
-    #about{
-        font-size: x-small;
-        height: auto;
-        width: auto;
-    }
-    #home img{
+    .nav_menu{
         display: none;
     }
-    .hometext{
-        margin: 80px;
-    }
-    #skillimg{
-        align-items: center;
-    }  
-}
-@media (max-width:500px){
-    .card img{
-        width: auto;
+    .ham-menu{
+        display: block;
     }
 }
